@@ -8,7 +8,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter({ target: 'esnext', minify: true, logLevel: 'error', fallback: '200.html' }),
+		adapter: adapter({ target: 'esnext', minify: true, logLevel: 'error', fallback: 'ipfs-400.html' }),
 	}
 };
 

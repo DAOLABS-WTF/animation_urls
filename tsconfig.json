@@ -10,60 +10,24 @@
 		"sourceMap": true,
 		"strict": true,
 		"paths": {
-			"$env": [
-				"src/env"
-			],
-			"$env/*": [
-				"src/env/*"
-			],
-			"$lib": [
-				"src/lib"
-			],
-			"$lib/*": [
-				"src/lib/*"
-			],
-			"$stores": [
-				"src/stores"
-			],
-			"$stores/*": [
-				"src/stores/*"
-			],
-			"$utils": [
-				"src/utils"
-			],
-			"$utils/*": [
-				"src/utils/*"
-			],
-			"$assets": [
-				"src/assets"
-			],
-			"$assets/*": [
-				"src/assets/*"
-			],
-			"$constants": [
-				"src/constants"
-			],
-			"$constants/*": [
-				"src/constants/*"
-			],
-			"$models": [
-				"src/models"
-			],
-			"$models/*": [
-				"src/models/*"
-			],
-			"$data": [
-				"src/data"
-			],
-			"$data/*": [
-				"src/data/*"
-			],
-			"$routes": [
-				"src/routes"
-			],
-			"$routes/*": [
-				"src/routes/*"
-			],
+			"$env": ["./src/env"],
+			"$env/*": ["./src/env/*"],
+			"$lib": ["./src/lib"],
+			"$lib/*": ["./src/lib/*"],
+			"$stores": ["./src/stores"],
+			"$stores/*": ["./src/stores/*"],
+			"$utils": ["./src/utils"],
+			"$utils/*": ["./src/utils/*"],
+			"$assets": ["./src/assets"],
+			"$assets/*": ["./src/assets/*"],
+			"$constants": ["./src/constants"],
+			"$constants/*": ["./src/constants/*"],
+			"$models": ["./src/models"],
+			"$models/*": ["./src/models/*"],
+			"$data": ["./src/data"],
+			"$data/*": ["./src/data/*"],
+			"$routes": ["./src/routes"],
+			"$routes/*": ["./src/routes/*"]
 		}
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
