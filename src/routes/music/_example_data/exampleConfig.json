@@ -1,0 +1,11 @@
+[{
+	"_readme": "This is an example config json for the config to pass to music animation url",
+	"cover": "https://cloudflare-ipfs.com/ipfs/bafybeialkxh55wktdcudkhgoknkst27shycfmbeagt6bbjm7z52waswkp4",
+	"tracks": [
+		{
+			"file": "https://ipfs.io/ipfs/QmS91rZCh1qBbGzoxJDjPDkFdEeWo4vFVP9FNksi99Bx7B?filename=The%20Celebrated%20Minuet.mp3",
+			"name": "The Celebrated Minuet",
+			"artist": "Study Music"
+		}
+	]
+}]

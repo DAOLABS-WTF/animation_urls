@@ -1,0 +1,33 @@
+html,
+body {
+	font-family: monospace;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary: #90eaf1;
+	--stroke-player-primary: #7fcec9;
+}
+
+.darkmode {
+	--stroke-player-primary: #18b4c7;
+}
+
+/* Hide scrollbar for webkit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+	background-color: transparent;
+}
+
+/* Hide scrollbar for Firefox */
+* {
+	scrollbar-width: none;
+	scrollbar-color: transparent transparent;
+}
+
+/* Hide scrollbar for Internet Explorer */
+* {
+	-ms-overflow-style: none;
+}
