@@ -9,14 +9,6 @@ const config = {
 
 	kit: {
 		adapter: adapter({ target: 'esnext', minify: true, logLevel: 'error', fallback: '200.html' }),
-
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
-		},
-		prerender: {
-			default: false
-		}
 	}
 };
 
