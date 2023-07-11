@@ -5,9 +5,11 @@
 	import Loading from '$lib/Loading.svelte';
 	import MusicPlayer from '$lib/MusicPlayer';
 	import type exampleConfig from './_example_data/exampleConfigMulti.json';
+	import { browser } from '$app/environment';
 
-	let configParam =
-		$page.url.searchParams.get('cid') || 'Qmbaj3ASjHMbZ9qh3Wz7yGaKWGLKjE8dcvUKErZWqTL8Ad';
+	let configParam = browser
+		? $page.url.searchParams.get('cid') || 'Qmbaj3ASjHMbZ9qh3Wz7yGaKWGLKjE8dcvUKErZWqTL8Ad'
+		: '';
 
 	let config: typeof exampleConfig;
 	let loading: boolean = false;

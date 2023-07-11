@@ -5,6 +5,7 @@
 	import { assumeIpfsHash, ipfsCidUrl } from '$utils/ipfs';
 	import Card, { type CardConfig, type CardType } from '$lib/Card.svelte';
 	import Loading from '$lib/Loading.svelte';
+	import { browser } from '$app/environment';
 
 	export let cardType: CardType = 'vertical';
 
@@ -12,11 +13,12 @@
 	let image: string;
 	let loading = false;
 
-	let configParam = $page.url.searchParams.get('config') || '';
-	const imageParam =
-		$page.url.searchParams.get('image') || 'QmXHt66FELHYMgQbWVq1nZ5FxzgyNq6gbNBeNKNA7YccSW/1.png';
-	const title = $page.url.searchParams.get('title');
-	const spin = $page.url.searchParams.get('spin');
+	let configParam = browser ? $page.url.searchParams.get('config') || '' : '';
+	const imageParam = browser
+		? $page.url.searchParams.get('image') || 'QmXHt66FELHYMgQbWVq1nZ5FxzgyNq6gbNBeNKNA7YccSW/1.png'
+		: '';
+	const title = browser ? $page.url.searchParams.get('title') : '';
+	const spin = browser ? $page.url.searchParams.get('spin') : '';
 
 	async function loadImage() {
 		loading = true;

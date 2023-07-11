@@ -6,6 +6,7 @@
 	import { parseConfig } from '$utils/data';
 	import Loading from '$lib/Loading.svelte';
 	import type { VideoPlayerType } from './types';
+	import { browser } from '$app/environment';
 
 	let loading = false;
 	let video: string;
@@ -17,11 +18,12 @@
 		barsBgColor: '#ffecbb'
 	};
 
-	const videoParam =
-		$page.url.searchParams.get('video') ||
-		'bafybeiaqyn5wolrdfcskbicvuwden75cwdn3cr7fjliaj4lsj7zziqzkii';
+	const videoParam = browser
+		? $page.url.searchParams.get('video') ||
+		  'bafybeiaqyn5wolrdfcskbicvuwden75cwdn3cr7fjliaj4lsj7zziqzkii'
+		: '';
 
-	let configParam = $page.url.searchParams.get('config') || '';
+	let configParam = browser ? $page.url.searchParams.get('config') || '' : '';
 
 	function setBackgroundFromConfig() {
 		if (config.playerBgColor) {

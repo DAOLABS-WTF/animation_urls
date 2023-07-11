@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 
-	const background = $page.url.searchParams.get('background') || 'eggshell';
+	const background = browser ? $page.url.searchParams.get('background') || 'eggshell' : '';
 </script>
 
 <main style="background: {background}">

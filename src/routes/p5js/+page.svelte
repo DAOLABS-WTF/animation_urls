@@ -5,6 +5,7 @@
 	import P5jsPreview from '$lib/P5jsPreview.svelte';
 	import { assumeIpfsHash, ipfsCidUrl } from '$utils/ipfs';
 	import { parseConfig } from '$utils/data';
+	import { browser } from '$app/environment';
 
 	type Unit = 'px' | 'em' | 'rem' | 'vw' | 'vh' | '%';
 
@@ -27,10 +28,11 @@
 	let script: string;
 	let config: Config = {};
 
-	const scriptParam =
-		$page.url.searchParams.get('script') || 'QmcGKReCjttTrvNkYm41jpDnNmD2gMVtjepsthpfrPB2vd';
+	const scriptParam = browser
+		? $page.url.searchParams.get('script') || 'QmcGKReCjttTrvNkYm41jpDnNmD2gMVtjepsthpfrPB2vd'
+		: '';
 
-	let configParam = $page.url.searchParams.get('config') || '';
+	let configParam = browser ? $page.url.searchParams.get('config') || '' : '';
 
 	async function loadScript() {
 		loading = true;
