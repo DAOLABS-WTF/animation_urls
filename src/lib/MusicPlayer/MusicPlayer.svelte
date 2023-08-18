@@ -108,7 +108,7 @@
 			--stroke-player-primary: ${extracted[extracted.length - 1]};
 			--stroke-player-secondary: ${extracted[0]};
 			--track-background: ${extracted[0]};
-			--track-background-active: ${extracted[2]};
+			--track-background-active: ${extracted[2]}44;
 			--text-secondary: ${complement[Math.floor(complement.length / 1.5)]};
 			--text-tertiary: ${complement[Math.floor(complement.length / 1.5) + 1]};
 			--stroke-tertiary: ${complement[Math.floor(complement.length / 1.5) + 1]};
@@ -179,6 +179,7 @@
 					bind:volume
 					bind:paused
 					bind:duration
+					on:ended={() => (currentTime = 0)}
 					on:ended={handleNext}
 				/>
 				<div class="progress">
