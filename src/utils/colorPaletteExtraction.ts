@@ -8,16 +8,16 @@ const buildPalette = colorsList => {
 	for (let i = 0; i < orderedByColor.length; i++) {
 		const hexColor = rgbToHex(orderedByColor[i]);
 		if (i > 0) {
-            const difference = calculateColorDifference(orderedByColor[i], orderedByColor[i - 1]);
+			const difference = calculateColorDifference(orderedByColor[i], orderedByColor[i - 1]);
 			// if the distance is less than 120 we ommit that color
 			if (difference < 120) {
-                continue;
+				continue;
 			}
 		}
 		finalColors = [...finalColors, hexColor];
 		// true when hsl color is not black/white/grey
 		if (hslColors[i].h) {
-            const hexColorComplementary = hslToHex(hslColors[i]);
+			const hexColorComplementary = hslToHex(hslColors[i]);
 			finalComplementaryColors = [
 				...finalComplementaryColors,
 				hexColorComplementary
@@ -280,8 +280,8 @@ export function extractColors(imgId: string) {
 		if (!canvas) {
 			return;
 		}
-		canvas.width = image.width;
-		canvas.height = image.height;
+		canvas.width = image.naturalWidth;
+		canvas.height = image.naturalHeight;
 		const ctx = canvas.getContext('2d');
 		ctx.drawImage(image, 0, 0);
 
