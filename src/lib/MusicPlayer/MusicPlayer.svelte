@@ -155,11 +155,15 @@
 					<span class="album-switcher__button" on:click={() => switchAlbum(currentAlbum - 1)}>
 						<Icon name="chrevronCircle" />
 					</span>
+				{:else}
+					<span />
 				{/if}
 				{#if currentAlbum < config.length - 1}
 					<span class="album-switcher__button" on:click={() => switchAlbum(currentAlbum + 1)}>
 						<Icon name="chrevronCircle" rotation={180} />
 					</span>
+				{:else}
+					<span />
 				{/if}
 			</div>
 		{/if}
@@ -208,8 +212,11 @@
 	.album-switcher {
 		transform: translateY(18px);
 		text-align: center;
+		user-select: none;
 	}
-
+	.album-switcher__button {
+		cursor: pointer;
+	}
 	.player-container {
 		height: 100vh;
 		display: flex;
